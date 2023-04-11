@@ -13,11 +13,13 @@ const Myprofile = () => {
         <h2 className="my-profile-h2">My rockets</h2>
         <table className="mprtable">
           <tbody>
-            {rockets.map((rocket) => (rocket.reserved ? (
-              <tr key={rocket.id}>
-                <td className="mprtd">{rocket.rocket_name}</td>
-              </tr>
-            ) : null))}
+            {rockets
+              .filter((rocket) => rocket.reserved)
+              .map((reservedRocket) => (
+                <tr key={reservedRocket.id}>
+                  <td className="mprtd">{reservedRocket.rocket_name}</td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
