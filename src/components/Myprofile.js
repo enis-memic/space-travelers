@@ -4,10 +4,23 @@ import './myprofile.css';
 const Myprofile = () => {
   const { rockets } = useSelector((state) => state.rockets);
 
+  const { missions } = useSelector((state) => state.missions);
+
   return (
     <div className="my-profile-div">
       <div>
         <h2 className="my-profile-h2">My missions</h2>
+        <table className="mprtable">
+          <tbody>
+            {missions
+              .filter((mission) => mission.joined)
+              .map((joinedMission) => (
+                <tr key={joinedMission.mission_id}>
+                  <td className="mprtd">{joinedMission.mission_name}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
       </div>
       <div className="mprdiv">
         <h2 className="my-profile-h2">My rockets</h2>
