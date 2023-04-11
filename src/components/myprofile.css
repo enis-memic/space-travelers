@@ -1,0 +1,25 @@
+.my-profile-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.my-profile-h2 {
+  font-size: 30px;
+}
+
+.mprdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mprtable {
+  border-collapse: collapse;
+  width: 400px;
+}
+
+.mprtd {
+  height: 60px;
+  border: 1px solid #e3e3e3;
+  padding-left: 20px;
+}
