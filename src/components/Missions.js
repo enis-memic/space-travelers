@@ -23,7 +23,7 @@ const Missions = () => {
     dispatch(cancelMission(missionId));
   };
   return (
-    <table>
+    <table className="mtable">
       <thead>
         <tr>
           <th>Mission</th>
