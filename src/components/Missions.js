@@ -1,13 +1,26 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missionsSlice';
+import {
+  fetchMissions,
+  joinMission,
+  cancelMission,
+} from '../redux/missions/missionsSlice';
 
 const Missions = () => {
-  const { missions } = useSelector((state) => state.missions);
+  const { missions, fetched } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
+    if (!fetched) {
+      dispatch(fetchMissions());
+    }
+  }, [dispatch, fetched]);
+
+  const reserveMission = (missionId) => {
+    dispatch(joinMission(missionId));
+  };
+  const unresMission = (missionId) => {
+    dispatch(cancelMission(missionId));
+  };
   return (
     <table>
       <thead>
@@ -23,9 +36,23 @@ const Missions = () => {
             <td className="mission-title">{mission.mission_name}</td>
             <td className="mission-description">{mission.description}</td>
             <td className="mission-button">
-              <button id={mission.mission_id} type="button">
-                Join mission
-              </button>
+              {mission.joined ? (
+                <button
+                  id={mission.mission_id}
+                  type="button"
+                  onClick={() => unresMission(mission.mission_id)}
+                >
+                  Leave Mission
+                </button>
+              ) : (
+                <button
+                  id={mission.mission_id}
+                  type="button"
+                  onClick={() => reserveMission(mission.mission_id)}
+                >
+                  Join mission
+                </button>
+              )}
             </td>
           </tr>
         ))}
