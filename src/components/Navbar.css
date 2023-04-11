@@ -6,7 +6,7 @@ a {
 
 .links {
   display: flex;
-  gap: 25px;
+  gap: 7px;
 }
 
 .active {
