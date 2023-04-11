@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchRockets, bookRockets, unBookRockets } from '../redux/rockets/rocketsSlice';
+import './rocketscss.css';
 
 const Rockets = () => {
   const { rockets, fetched } = useSelector((state) => state.rockets);
@@ -21,23 +22,29 @@ const Rockets = () => {
   };
 
   return (
-    <div className="Rockets">
+    <div className="rockets">
       <h1>Rockets</h1>
-      <ul>
+      <ul className="rul">
         {rockets.map((rocket) => (
-          <li key={rocket.id}>
-            <img src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
-            <h2>{rocket.rocket_name}</h2>
-            <p>{rocket.description}</p>
-            {rocket.reserved ? (
-              <button type="button" onClick={() => handleReject(rocket.id)}>
-                Cancel Reservation
-              </button>
-            ) : (
-              <button type="button" onClick={() => handleClick(rocket.id)}>
-                Reserve Rocket
-              </button>
-            )}
+          <li className="rli" key={rocket.id}>
+            <img className="rimg" src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
+            <div className="rdiv">
+              <h4 className="rh4">{rocket.rocket_name}</h4>
+              <p className="rp">
+                {rocket.reserved && <span className="rspan">Reserved</span>}
+                {' '}
+                {rocket.description}
+              </p>
+              {rocket.reserved ? (
+                <button className="rcancel" type="button" onClick={() => handleReject(rocket.id)}>
+                  Cancel Reservation
+                </button>
+              ) : (
+                <button className="rreserve" type="button" onClick={() => handleClick(rocket.id)}>
+                  Reserve Rocket
+                </button>
+              )}
+            </div>
           </li>
         ))}
       </ul>
