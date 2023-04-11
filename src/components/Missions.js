@@ -31,7 +31,7 @@ const Missions = () => {
           <th>Status</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="tbody">
         {missions.map((mission) => (
           <tr className="mission-list" key={mission.mission_id}>
             <td className="mission-title">{mission.mission_name}</td>
@@ -52,6 +52,7 @@ const Missions = () => {
                 <button
                   id={mission.mission_id}
                   type="button"
+                  className="active-btn"
                   onClick={() => unresMission(mission.mission_id)}
                 >
                   Leave Mission
@@ -60,6 +61,7 @@ const Missions = () => {
                 <button
                   id={mission.mission_id}
                   type="button"
+                  className="join-btn"
                   onClick={() => reserveMission(mission.mission_id)}
                 >
                   Join mission
