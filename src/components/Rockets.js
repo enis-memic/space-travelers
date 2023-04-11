@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchRockets, bookRockets, unBookRockets } from '../redux/rockets/rocketsSlice';
-import './rocketscss.css';
+import './rockets.css';
 
 const Rockets = () => {
   const { rockets, fetched } = useSelector((state) => state.rockets);
@@ -25,7 +25,7 @@ const Rockets = () => {
     <div className="rockets">
       <ul className="rul">
         {rockets.map((rocket) => (
-          <li className="rli" key={rocket.id}>
+          <li className="rli" key={rocket.id} data-testid={`rocket-${rocket.id}`}>
             <img className="rimg" src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
             <div className="rdiv">
               <h4 className="rh4">{rocket.rocket_name}</h4>

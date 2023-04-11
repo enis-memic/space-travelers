@@ -95,9 +95,10 @@ ul {
 .join-btn {
   background-color: transparent;
   color: #4b5056;
-  padding: 0.8rem;
+  padding: 0.6rem 0.3rem;
   border-radius: 5px;
   border: #4b5056 1px solid;
+  width: 100px;
 }
 
 .active-btn {
@@ -105,5 +106,6 @@ ul {
   color: #de4150;
   border: #de4150 1px solid;
   border-radius: 5px;
-  padding: 0.8rem;
+  padding: 0.8rem 0.3rem;
+  width: 100px;
 }
