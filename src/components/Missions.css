@@ -2,13 +2,12 @@ ul {
   list-style: none;
 }
 
-td {
-  text-align: center;
+.tbody td {
   border: 1px solid gray;
 }
 
-tbody:nth-child(odd) {
-  background-color: #ececec;
+.mission-list:nth-child(odd) {
+  background-color: #f2f2f2;
 }
 
 table {
@@ -33,12 +32,13 @@ table {
 }
 
 .member {
-  background-color: aquamarine;
+  background-color: #18a2b8;
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-weight: bold;
   padding: 5px;
-  width: 80px;
+  width: 110px;
 }
 
 .non-member {
@@ -48,7 +48,7 @@ table {
   border-radius: 6px;
   font-weight: bold;
   padding: 5px;
-  width: 80px;
+  width: 120px;
 }
 
 .Reserve {
@@ -82,4 +82,28 @@ table {
 
 .Reserved:hover {
   transform: scale(1.05);
+}
+
+.mission-button {
+  text-align: center;
+}
+
+.mission-status {
+  text-align: center;
+}
+
+.join-btn {
+  background-color: transparent;
+  color: #4b5056;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: #4b5056 1px solid;
+}
+
+.active-btn {
+  background-color: transparent;
+  color: #de4150;
+  border: #de4150 1px solid;
+  border-radius: 5px;
+  padding: 0.8rem;
 }

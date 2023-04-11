@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid gainsboro;
+  padding-bottom: 40px;
+}
+
+.header-1 {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.header h1 {
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+img {
+  width: 15%;
+}
+
+.header-photo {
+  display: flex;
+  gap: 30px;
+}
