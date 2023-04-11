@@ -5,6 +5,7 @@ import {
   joinMission,
   cancelMission,
 } from '../redux/missions/missionsSlice';
+import './Missions.css';
 
 const Missions = () => {
   const { missions, fetched } = useSelector((state) => state.missions);
@@ -35,6 +36,17 @@ const Missions = () => {
           <tr className="mission-list" key={mission.mission_id}>
             <td className="mission-title">{mission.mission_name}</td>
             <td className="mission-description">{mission.description}</td>
+            <td className="mission-status">
+              {mission.joined ? (
+                <button type="button" className="member">
+                  Active Member
+                </button>
+              ) : (
+                <button type="button" className="non-member">
+                  NOT A MEMBER
+                </button>
+              )}
+            </td>
             <td className="mission-button">
               {mission.joined ? (
                 <button
