@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render All Components render Header: <div className="header">
+    <div className="header-1">
+      <img src={planet} alt="planet logo" />
+      <h1 className="header-photo">Space Travelers&apos; Hub</h1>
+    </div>
+    <Navbar />
+  </div> 1`] = `
+<div
+  class="header"
+>
+  <div
+    class="header-1"
+  >
+    <img
+      alt="planet logo"
+      src="planet.png"
+    />
+    <h1
+      class="header-photo"
+    >
+      Space Travelers' Hub
+    </h1>
+  </div>
+  <nav
+    class="navbar"
+  >
+    <div
+      class="links"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        Rockets
+      </a>
+      <a
+        class=""
+        href="/Missions"
+      >
+        Missions
+      </a>
+      <div
+        class="line"
+      >
+         
+      </div>
+      <a
+        class=""
+        href="/Myprofile"
+      >
+        My Profile
+      </a>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Render All Components render MyProfile: 
+    <div className="my-profile-div">
+      <div>
+        <h2 className="my-profile-h2">My missions</h2>
+        <table className="mprtable">
+          <tbody>
+            <tr key={joinedMission.mission_id}>
+                 <td className="mprtd"></td>
+                </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="mprdiv">
+        <h2 className="my-profile-h2">My rockets</h2>
+        <table className="mprtable">
+          <tbody>
+             <tr key={reservedRocket.id}>
+                  <td className="mprtd"></td>
+                </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> 1`] = `
+<div
+  class="my-profile-div"
+>
+  <div>
+    <h2
+      class="my-profile-h2"
+    >
+      My missions
+    </h2>
+    <table
+      class="mprtable"
+    >
+      <tbody />
+    </table>
+  </div>
+  <div
+    class="mprdiv"
+  >
+    <h2
+      class="my-profile-h2"
+    >
+      My rockets
+    </h2>
+    <table
+      class="mprtable"
+    >
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Render All Components render missions: 
+        <table>
+           <thead>
+             <tr>
+               <th>
+                 Mission
+               </th>
+               <th>
+                 Description
+               </th>
+               <th>
+                 Status
+               </th>
+             </tr>
+           </thead>
+           <tbody />
+         </table>
+         <tr
+      class="mission-list"
+    >
+      <td
+        class="mission-title"
+      />
+      <td
+        class="mission-description"
+      />
+      <td
+        class="mission-status"
+      >
+        <button
+          class="non-member"
+        >
+          Reserve
+        </button>
+      </td>
+      <td
+        class="mission-button"
+      >
+        <button
+          class="Reserve"
+          type="button"
+        >
+          Join Mission
+        </button>
+      </td>
+    </tr>
+     1`] = `
+<table
+  class="mtable"
+>
+  <thead>
+    <tr>
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="tbody"
+  />
+</table>
+`;
+
+exports[`Render All Components render navbar: 
+    <div className="links">
+      <a href="/">Rockets</a>
+      <a href="Missions">Missions</a>
+      <div className="line"> </div>
+      <a href="Myprofile">My Profile</a>
+    </div> 1`] = `
+<nav
+  class="navbar"
+>
+  <div
+    class="links"
+  >
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+    >
+      Rockets
+    </a>
+    <a
+      class=""
+      href="/Missions"
+    >
+      Missions
+    </a>
+    <div
+      class="line"
+    >
+       
+    </div>
+    <a
+      class=""
+      href="/Myprofile"
+    >
+      My Profile
+    </a>
+  </div>
+</nav>
+`;
